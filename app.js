@@ -16,9 +16,9 @@ function addItem(product, price, isAdd) {
 
     document.getElementById("subtotal").innerText = calculation()
 
-    document.getElementById("tex").innerText = calculation() * 0.1;
+    document.getElementById("tex").innerText = (calculation() * 0.1).toFixed(2)
 
-    document.getElementById("grand-total").innerText = calculation() + texAmoutn;
+    document.getElementById("grand-total").innerText = calculation() + parseFloat((calculation() * 0.1).toFixed(2));
 
 
 }
